@@ -1,0 +1,7 @@
+Flask==1.0.2
+ipython==8.14.0
+matplotlib==2.2.2
+numpy==1.19.5
+seaborn==0.8.1
+tensorflow==2.6.2
+Werkzeug==0.14.1
