@@ -22,7 +22,7 @@ def upload_file():
             f = request.files['file']
             #f.save(secure_filename(f.filename))
             f.save(os.path.join(app.config['UPLOAD_FOLDER'], 'test.wav'))
-            result = subprocess.check_output(['python', 'finalcode.py'])
+            result = subprocess.check_output(['python', 'final.py'])
             output = result.decode('utf-8')
             return {
                 'status': 200,
