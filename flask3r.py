@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.exceptions import BadRequestKeyError
 from werkzeug.datastructures import  FileStorage
 app = Flask(__name__)
-UPLOAD_FOLDER = r'C:\Users\hp compaq\Desktop'
+UPLOAD_FOLDER = r'/home/ubuntu/main/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 #@app.route('/upload')
