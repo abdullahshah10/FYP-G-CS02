@@ -11,15 +11,15 @@ from tensorflow.keras import models
 from IPython import display
 
 # Load the model from the H5 file
-model = tf.keras.models.load_model('D:\Studies\FYP(G-CS02)\FYP-G-CS02\mymodel.h5')    #REPLACE THIS PATH
+model = tf.keras.models.load_model('C:/Users/thats/Downloads/code/mymodel.h5')    #REPLACE THIS PATH
 
 import os
-import soundfile as sf
+#import soundfile as sf
 import numpy as np
 import librosa
 
 # Load the audio file
-audio_file = 'D:\Studies\FYP(G-CS02)\FYP-G-CS02\Sentence\safiullah (4).wav'    #CHANGE PATH HERE
+audio_file = 'C:/Users/thats/Downloads/code/Sentence/safiullah (4).wav'    #CHANGE PATH HERE
 audio, sr = librosa.load(audio_file, sr=44100)
 
 # Set the desired segment length and threshold
@@ -39,7 +39,7 @@ while segment_start < len(audio):
     segment_start += segment_length
 
 '''# Save the segments to files
-output_path = 'C:/Users/hp compaq/Downloads/trimming'
+output_path = 'C:/Users/HUSSAIN/OneDrive/Desktop/code/trimming'
 if not os.path.exists(output_path):
     os.makedirs(output_path)
 for i, segment in enumerate(segments):
@@ -82,7 +82,7 @@ logging.getLogger('tensorflow').setLevel(logging.ERROR)
 
 
 # Load the model from the H5 file
-model = tf.keras.models.load_model('D:\Studies\FYP(G-CS02)\FYP-G-CS02\mymodel.h5') #CHANGE PATH HERE
+model = tf.keras.models.load_model('C:/Users/thats/Downloads/code/mymodel.h5') #CHANGE PATH HERE
 
 seed = 42
 tf.random.set_seed(seed)
@@ -162,7 +162,7 @@ test_spectrogram_ds = None
 import os
 
 # Define the path to the folder containing the audio files
-folder_path = "D:\Studies\FYP(G-CS02)\FYP-G-CS02\trimming"     #REPLACE THIS PATH
+folder_path = "C:/Users/thats/Downloads/code/trimming/"     #REPLACE THIS PATH
 
 sentence_created=[]
 
@@ -254,10 +254,10 @@ print(translation.text)
 tts = gTTS(text=translation.text, lang='ur')
 
 # Save the speech as an audio file
-tts.save("C:/Users/hp compaq/Downloads/text_to_speech/translation.mp3")
+tts.save("C:/Users/code/translation.mp3")
 
 # Play the audio file using display
-display.Audio("C:/Users/hp compaq/Downloads/text_to_speech/translation.mp3")'''
+display.Audio("C:/Users/code/translation.mp3")'''
 
 
 from translate import Translator
@@ -275,3 +275,4 @@ translation = translator.translate(sentence_new) # en for english and ur for urd
 
 # Print the translated sentence
 print(translation)
+    
