@@ -11,7 +11,7 @@ from tensorflow.keras import models
 from IPython import display
 
 # Load the model from the H5 file
-model = tf.keras.models.load_model('C:/Users/thats/Downloads/code/mymodel.h5')    #REPLACE THIS PATH
+model = tf.keras.models.load_model('/home/ubuntu/FYP-G-CS02/mymodel.h5')    #REPLACE THIS PATH
 
 import os
 #import soundfile as sf
@@ -19,7 +19,7 @@ import numpy as np
 import librosa
 
 # Load the audio file
-audio_file = 'C:/Users/thats/Downloads/code/Sentence/safiullah (4).wav'    #CHANGE PATH HERE
+audio_file = '/home/ubuntu/FYP-G-CS02/Sentence/safiullah (4).wav'    #CHANGE PATH HERE
 audio, sr = librosa.load(audio_file, sr=44100)
 
 # Set the desired segment length and threshold
@@ -82,7 +82,7 @@ logging.getLogger('tensorflow').setLevel(logging.ERROR)
 
 
 # Load the model from the H5 file
-model = tf.keras.models.load_model('C:/Users/thats/Downloads/code/mymodel.h5') #CHANGE PATH HERE
+model = tf.keras.models.load_model('/home/ubuntu/FYP-G-CS02/mymodel.h5') #CHANGE PATH HERE
 
 seed = 42
 tf.random.set_seed(seed)
@@ -162,7 +162,7 @@ test_spectrogram_ds = None
 import os
 
 # Define the path to the folder containing the audio files
-folder_path = "C:/Users/thats/Downloads/code/trimming/"     #REPLACE THIS PATH
+folder_path = "/home/ubuntu/FYP-G-CS02/trimming/"     #REPLACE THIS PATH
 
 sentence_created=[]
 
