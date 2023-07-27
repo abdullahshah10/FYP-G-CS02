@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 from werkzeug.exceptions import BadRequestKeyError
 from werkzeug.datastructures import  FileStorage
 app = Flask(__name__)
-UPLOAD_FOLDER = r'C:/Users/thats/Downloads/code/api'
+UPLOAD_FOLDER = r'/home/ubuntu/FYP-G-CS02/api'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 #@app.route('/upload')
