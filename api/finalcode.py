@@ -17,20 +17,20 @@ logging.getLogger('tensorflow').setLevel(logging.ERROR)
 
 
 # Load the model from the H5 file
-model = tf.keras.models.load_model('C:/Users/hp compaq/Downloads/mymodel.h5')
+model = tf.keras.models.load_model('/home/ubuntu/FYP-G-CS02/mymodel.h5')
 
 seed = 42
 tf.random.set_seed(seed)
 np.random.seed(seed)
 
 #DATASET_PATH = 'C:/Users/hp compaq/Downloads/Complete Dataset/Complete Dataset'
-DATASET_PATH='C:/Users/hp compaq/Downloads/Newfolder/Latestdataset'
-data_dir = pathlib.Path(DATASET_PATH)
+#DATASET_PATH='C:/Users/hp compaq/Downloads/Newfolder/Latestdataset'
+#data_dir = pathlib.Path(DATASET_PATH)
 #print(data_dir)
 
 
-commands = np.array(tf.io.gfile.listdir(str(data_dir)))
-commands = commands[(commands != 'README.md') & (commands != '.DS_Store')]
+#commands = np.array(tf.io.gfile.listdir(str(data_dir)))
+#commands = commands[(commands != 'README.md') & (commands != '.DS_Store')]
 #print('Commands:', commands)
 #print()
 
@@ -96,7 +96,7 @@ test_spectrogram_ds = None
 
 
 #Signalgeneration.record_audio("recording")
-x = 'C:/Users/hp compaq/Desktop/test.wav'
+x = '/home/ubuntu/FYP-G-CS02/api/test.wav'
 
 # this will read the audio file and load into the memory as a binary string
 x = tf.io.read_file(str(x))

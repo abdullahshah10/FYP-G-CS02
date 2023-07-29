@@ -22,7 +22,7 @@ def upload_file():
             f = request.files['file']
             #f.save(secure_filename(f.filename))
             f.save(os.path.join(app.config['UPLOAD_FOLDER'], 'test.wav'))
-            result = subprocess.check_output(['python', 'final.py'])
+            result = subprocess.check_output(['python3', 'finalcode.py'])
             output = result.decode('utf-8')
             return {
                 'status': 200,
@@ -32,4 +32,5 @@ def upload_file():
             print(request.files)
             return 'File key is missing in the request!', 400
 if __name__ == '__main__':
-   app.run(debug = True)
+   #app.run(debug = True)
+    app.run(host="0.0.0.0",port=4000,debug=True)
